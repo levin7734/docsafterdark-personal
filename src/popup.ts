@@ -108,7 +108,7 @@ class ModeComponent extends StateSubscriber {
         Logger.debug(this.modeButtons);
 
         this.modeButtons.forEach((button) => {
-            button.addEventListener("click", (event) => {
+            button.addEventListener("click", async (event) => {
                 // NOTE: Only include state management logic here, as the
                 //       view logic will reflect the internal state when the
                 //       update() function is called.
@@ -124,23 +124,43 @@ class ModeComponent extends StateSubscriber {
                         this.state.setData({ mode: ExtensionMode.Off });
                         break;
                     case "dark":
-                        this.state.setData({
+                        await this.state.setData({
                             mode: ExtensionMode.Dark,
-                            doc_bg: DocumentBackground.Blend,
+                            dark_mode: { variant: DarkModeOperation.Midnight },
+                            doc_bg: DocumentBackground.Custom,
+                            custom_bg: "#000000",
                             invert_enabled: true,
-                            invert_mode: defaultExtensionData.invert_mode,
+                            invert_mode: InvertMode.Normal,
+                            show_border: false,
                         });
+                        await this.setReadingZoom();
                         break;
                     case "light":
-                        this.state.setData({
+                        await this.state.setData({
                             mode: ExtensionMode.Light,
-                            doc_bg: DocumentBackground.Default,
+                            doc_bg: DocumentBackground.Custom,
+                            custom_bg: "#f7f7f5",
                             invert_enabled: false,
+                            show_border: false,
                         });
+                        await this.setReadingZoom();
                         break;
                 }
             });
         });
+    }
+
+    private async setReadingZoom(): Promise<void> {
+        if (browser_ns.tabs.setZoom === undefined) return;
+
+        const tabs = await browser_ns.tabs.query({
+            active: true,
+            currentWindow: true,
+        });
+        const activeTab = tabs.find((tab) => tab.id !== undefined);
+        if (activeTab?.id !== undefined) {
+            await browser_ns.tabs.setZoom(activeTab.id, 1.25);
+        }
     }
 
     update(newData: ExtensionData) {

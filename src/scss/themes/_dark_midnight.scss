@@ -1,15 +1,15 @@
 html.DocsAfterDark_dark.DocsAfterDark_midnight {
-    --primary-text-color: #fff;
-    --secondary-text-color: #f2f2f2;
-    --tertiary-text-color: #e6e6e6;
+    --primary-text-color: #e3e3e3;
+    --secondary-text-color: #d6d6d6;
+    --tertiary-text-color: #bdbdbd;
     --disabled-text: #666;
 
     --root-background-color: #000;
-    --primary-background-color: #0d0d0d;
-    --secondary-background-color: #1a1a1a;
-    --tertiary-background-color: #262626;
-    --quaternary-background-color: #333;
-    --background-color-5: #404040;
+    --primary-background-color: #0a0a0a;
+    --secondary-background-color: #141414;
+    --tertiary-background-color: #202020;
+    --quaternary-background-color: #2b2b2b;
+    --background-color-5: #363636;
 
     --menu-background: var(--secondary-background-color);
     --hover-background-color: #ffffff1a;
@@ -29,7 +29,7 @@ html.DocsAfterDark_dark.DocsAfterDark_midnight {
         --tertiary-background-color
     ); // CURRENTLY USED FOR CALENDAR INPUT
 
-    --button-text-color: #fff;
+    --button-text-color: #e3e3e3;
 
     --accent-color: hsl(var(--DocsAfterDark_accentHue) 40% 60%);
     --light-accent-color: hsl(var(--DocsAfterDark_accentHue) 40% 70% / 10%);

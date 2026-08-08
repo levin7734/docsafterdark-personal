@@ -11,7 +11,7 @@ const STYLE_PROPERTY_PREFIX = "--DocsAfterDark_";
 const SELECTOR_PREFIX = "DocsAfterDark_";
 
 const links = {
-    github: "https://github.com/waymondrang/docsafterdark",
+    github: "https://github.com/levin7734/docsafterdark-personal",
     donate: "https://www.buymeacoffee.com/waymondrang",
     releases: "https://github.com/waymondrang/docsafterdark/releases",
     release: (version: string) => {
@@ -62,7 +62,8 @@ const replacements = {
 };
 
 const documentInvert = {
-    normal: "invert(1)",
+    // White becomes black while black becomes the softer night text #e3e3e3.
+    normal: "invert(1) brightness(89%)",
     grayscale: "invert(1) contrast(79.5%) grayscale(100%)",
     black: "invert(1) grayscale(100%)",
     colorful: "invert(1) hue-rotate(180deg)",
@@ -80,25 +81,25 @@ const buttonPosition = {
 };
 
 const defaultExtensionData: ExtensionData = {
-    mode: ExtensionMode.Dark,
+    mode: ExtensionMode.Light,
 
-    dark_mode: { variant: DarkModeOperation.Normal },
+    dark_mode: { variant: DarkModeOperation.Midnight },
     light_mode: { variant: LightModeOperation.Normal },
 
-    doc_bg: DocumentBackground.Blend,
-    custom_bg: "beige",
+    doc_bg: DocumentBackground.Custom,
+    custom_bg: "#f7f7f5",
 
     // Dark blue
     accent_color: { hue: 225 },
 
-    invert_enabled: true,
-    invert_mode: InvertMode.Colorful,
+    invert_enabled: false,
+    invert_mode: InvertMode.Normal,
 
     button_options: {
         show: true,
     },
 
-    show_border: true,
+    show_border: false,
 
     version: {
         last_version: "",

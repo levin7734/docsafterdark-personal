@@ -1,7 +1,7 @@
 {
-    "name": "docsafterdark",
-    "version": "2.0.4",
-    "description": "Beyond dark mode for Google Docs",
+    "name": "docs-day-night",
+    "version": "2.0.5",
+    "description": "Personal day and night reading presets for Google Docs",
     "type": "module",
     "devDependencies": {
         "@eslint/js": "^9.39.2",
@@ -26,13 +26,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/waymondrang/docsafterdark.git"
+        "url": "git+https://github.com/levin7734/docsafterdark-personal.git"
     },
     "author": "Raymond Wang",
     "bugs": {
-        "url": "https://github.com/waymondrang/docsafterdark/issues"
+        "url": "https://github.com/levin7734/docsafterdark-personal/issues"
     },
-    "homepage": "https://docsafterdark.com/",
+    "homepage": "https://github.com/levin7734/docsafterdark-personal",
     "scripts": {
         "build": "./build.sh",
         "check": "prettier --check . && eslint src && stylelint '**/*.scss'",

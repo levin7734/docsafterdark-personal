@@ -2457,3 +2457,21 @@ img.docs-generativeai-onboarding-dialog-image,
 .kix-page-paginated {
     outline: var(--DocsAfterDark_documentBorder);
 }
+
+// Personal reading surface. Google Docs renders document text into canvas, so
+// this changes the surrounding UI without rewriting stored document styles.
+html.DocsAfterDark_enabled {
+    body,
+    button,
+    input,
+    textarea,
+    select {
+        font-family:
+            "Atkinson Hyperlegible", "Atkinson Hyperlegible Next",
+            "Google Sans", sans-serif;
+    }
+
+    .kix-page-paginated {
+        box-shadow: none !important;
+    }
+}

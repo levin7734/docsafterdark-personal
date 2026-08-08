@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "DocsAfterDark",
+    "name": "Docs Day & Night",
     "version": "0.0.0",
-    "description": "Beyond dark mode for Google Docs",
-    "author": "Raymond Wang",
+    "description": "Personal day and night reading presets for Google Docs",
+    "author": "Raymond Wang; personal preset fork by Levin",
     "content_scripts": [
         {
             "matches": ["*://docs.google.com/document/*"],
@@ -12,12 +12,12 @@
         }
     ],
     "action": {
-        "default_title": "DocsAfterDark Settings",
+        "default_title": "Docs Day & Night",
         "default_popup": "popup.html"
     },
     "web_accessible_resources": [
         {
-            "resources": ["docs.bundle.css"],
+            "resources": ["docs.bundle.css", "assets/fonts/*.ttf"],
             "matches": ["*://docs.google.com/*"]
         }
     ],

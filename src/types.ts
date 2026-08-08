@@ -172,6 +172,7 @@ interface BrowserAPI {
     };
     tabs: {
         query(queryInfo: QueryInfo): Promise<Tab[]>;
+        setZoom?(tabId: number, zoomFactor: number): Promise<void>;
         // Reference: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
         sendMessage<T>(tabId: number, message: T): Promise<unknown>;
         create(properties: CreateProperties): void;
