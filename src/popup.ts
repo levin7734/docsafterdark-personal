@@ -133,7 +133,6 @@ class ModeComponent extends StateSubscriber {
                             invert_mode: InvertMode.Normal,
                             show_border: false,
                         });
-                        await this.setReadingZoom();
                         break;
                     case "light":
                         await this.state.setData({
@@ -143,24 +142,10 @@ class ModeComponent extends StateSubscriber {
                             invert_enabled: false,
                             show_border: false,
                         });
-                        await this.setReadingZoom();
                         break;
                 }
             });
         });
-    }
-
-    private async setReadingZoom(): Promise<void> {
-        if (browser_ns.tabs.setZoom === undefined) return;
-
-        const tabs = await browser_ns.tabs.query({
-            active: true,
-            currentWindow: true,
-        });
-        const activeTab = tabs.find((tab) => tab.id !== undefined);
-        if (activeTab?.id !== undefined) {
-            await browser_ns.tabs.setZoom(activeTab.id, 1.25);
-        }
     }
 
     update(newData: ExtensionData) {

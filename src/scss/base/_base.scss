@@ -2475,3 +2475,16 @@ html.DocsAfterDark_enabled {
         box-shadow: none !important;
     }
 }
+
+// Personal monochrome shell: keep the editor chrome, sidebars, and toolbars on
+// the same surface as the selected day/night preset.
+html.DocsAfterDark_enabled {
+    #docs-chrome,
+    #docs-editor,
+    .docs-main-toolbars,
+    .left-sidebar-container,
+    .navigation-widget,
+    .docs-grille-gm3 {
+        background-color: var(--root-background-color) !important;
+    }
+}

@@ -1,6 +1,6 @@
 {
     "name": "docs-day-night",
-    "version": "2.0.5",
+    "version": "2.0.7",
     "description": "Personal day and night reading presets for Google Docs",
     "type": "module",
     "devDependencies": {

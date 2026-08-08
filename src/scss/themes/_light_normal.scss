@@ -2,34 +2,29 @@ html.DocsAfterDark_light.DocsAfterDark_normal {
     --primary-text-color: #202020;
     --secondary-text-color: #383838;
     --tertiary-text-color: #555;
-    --disabled-text: #666;
+    --disabled-text: #777;
 
     --root-background-color: #f7f7f5;
-    --primary-background-color: #fbfbf9;
-    --secondary-background-color: #ecece8;
-    --tertiary-background-color: #deded8;
-    --quaternary-background-color: #cecec7;
-    --background-color-5: #bdbdb5;
+    --primary-background-color: #f7f7f5;
+    --secondary-background-color: #f7f7f5;
+    --tertiary-background-color: #f7f7f5;
+    --quaternary-background-color: #f7f7f5;
+    --background-color-5: #f7f7f5;
 
-    --menu-background: var(--primary-background-color);
-    --hover-background-color: #0000001a;
-    --secondary-hover-background-color: #0000001e;
+    --menu-background: #f7f7f5;
+    --hover-background-color: #f7f7f5;
+    --secondary-hover-background-color: #f7f7f5;
+    --input-background-color: #f7f7f5;
 
-    --input-background-color: var(
-        --secondary-background-color
-    ); // CURRENTLY USED FOR CALENDAR INPUT
+    --primary-border-color: #d8d8d3;
+    --secondary-border-color: #d8d8d3;
+    --lighter-border-color: #c5c5bf;
+    --hover-border-color: #aaa;
 
-    --primary-border-color: #ccc;
-    --secondary-border-color: #404040;
-    --lighter-border-color: #808080;
-    --hover-border-color: #595959;
-
-    --accent-color: hsl(var(--DocsAfterDark_accentHue) 25% 50%);
-    --light-accent-color: hsl(var(--DocsAfterDark_accentHue) 25% 60% / 10%);
-    --light-accent-hover-color: hsl(
-        var(--DocsAfterDark_accentHue) 25% 40% / 20%
-    );
-    --accent-hover-color: hsl(var(--DocsAfterDark_accentHue) 25% 60% / 100%);
+    --accent-color: #202020;
+    --light-accent-color: #ecece8;
+    --light-accent-hover-color: #e2e2dd;
+    --accent-hover-color: #444;
 
     //////////////////
     // DECLARATIONS //
